@@ -5,7 +5,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin: ['http://localhost:5173', 'https://icebergbtl.uz', 'https://ice-berg-xi.vercel.app/'],
+    origin: ['http://localhost:5173', 'https://icebergbtl.uz'],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     credentials: true,
   });
