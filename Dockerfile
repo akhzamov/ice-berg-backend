@@ -1,4 +1,4 @@
-# этап сборки (build stage)
+# Build stage
 FROM node:18-alpine as build-stage
 WORKDIR /app
 COPY package*.json ./
@@ -6,7 +6,7 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-# этап production
+# Production stage
 FROM node:18-alpine as production-stage
 WORKDIR /app
 COPY --from=build-stage /app .
